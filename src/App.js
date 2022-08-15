@@ -16,15 +16,15 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path='/' element={<Explore />}></Route>
-          <Route path='/forgot-password' element={<ForgotPassword />}></Route>
-          <Route path='/offers' element={<Offers />}></Route>
-          <Route path='/category/:categoryName' element={<Category />}></Route>
+          <Route path='/' element={<Explore />} />
+          <Route path='/forgot-password' element={<ForgotPassword />} />
+          <Route path='/offers' element={<Offers />} />
+          <Route path='/category/:categoryName' element={<Category />} />
           <Route path='/profile' element={<PrivateRoute />}>
-            <Route path='/profile' element={<Profile />}></Route>
+            <Route path='/profile' element={<Profile />} />
           </Route>
-          <Route path='/sign-in' element={<SignIn />}></Route>
-          <Route path='/sign-up' element={<SignUp />}></Route>
+          <Route path='/sign-in' element={<SignIn />} />
+          <Route path='/sign-up' element={<SignUp />} />
         </Routes>
         <Navbar />
       </Router>
