@@ -26,3 +26,5 @@ function App() {
 }
 
 export default App;
+
+//TODO: completed nav component, next sort out sign in/ signup form components + auths.
