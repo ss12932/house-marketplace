@@ -15,7 +15,7 @@ import Spinner from '../components/Spinner';
 
 function CreateListing() {
   // eslint-disable-next-line
-  const [geolocationEnabled, setGeolocationEnabled] = useState(true);
+  const [geolocationEnabled, setGeolocationEnabled] = useState(false);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     type: 'rent',
@@ -156,7 +156,7 @@ function CreateListing() {
       });
     };
 
-    const imgUrls = await Promise.all(
+    const imageUrls = await Promise.all(
       [...images].map((image) => storeImage(image))
     ).catch(() => {
       setLoading(false);
@@ -166,7 +166,7 @@ function CreateListing() {
 
     const formDataCopy = {
       ...formData,
-      imgUrls,
+      imageUrls,
       geolocation,
       timestamp: serverTimestamp(),
     };
