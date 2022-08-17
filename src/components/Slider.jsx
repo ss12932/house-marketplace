@@ -45,6 +45,7 @@ function Slider() {
   }
 
   if (listings.length === 0) {
+    // keep it having big space if no listings there
     return <></>;
   }
 
